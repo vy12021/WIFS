@@ -1,0 +1,106 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+    ..\FrameXML\UI.xsd">
+    <Frame name="TargetTextFrame" enableMouse="false" parent="UIParent">
+        <Size x="200" y="86"/>
+        <Anchors>
+            <Anchor point="CENTER" relativePoint="CENTER"></Anchor>
+        </Anchors>
+        <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+            <EdgeSize val="16"/>
+            <TileSize val="16"/>
+            <Color r="0.75" g="0.75" b="0.75"/>
+            <BackgroundInsets left="5" right="5" top="5" bottom="5"/>
+        </Backdrop>
+        <Layers>
+            <Layer>
+                <FontString name="$parentName" inherits="GameFontHighlight" justifyH="LEFT">
+                    <Size x="150" y="14"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT">
+                            <Offset x="10" y="-9"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentLevel" inherits="GameFontHighlight">
+                    <Anchors>
+                        <Anchor point="TOPRIGHT">
+                            <Offset x="-10" y="-9"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentClass" inherits="GameFontHighlight">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="$parentName" relativePoint="BOTTOMLEFT">
+                            <Offset x="0" y="-2"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentPvP" inherits="GameFontHighlight" text="PvP">
+                    <Anchors>
+                        <Anchor point="TOPRIGHT" relativeTo="$parentLevel" relativePoint="BOTTOMRIGHT">
+                            <Offset x="0" y="-2"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentReaction" inherits="GameFontNormalSmall">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="$parentClass" relativePoint="BOTTOMLEFT">
+                            <Offset x="0" y="-2"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentFaction" inherits="GameFontNormalSmall">
+                    <Anchors>
+                        <Anchor point="TOPRIGHT" relativeTo="$parentPvP" relativePoint="BOTTOMRIGHT">
+                            <Offset x="0" y="-2"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentHealthLabel" inherits="GameFontNormalSmall">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="$parentReaction" relativePoint="BOTTOMLEFT">
+                            <Offset x="0" y="-2"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentHealth" inherits="GameFontNormalSmall">
+                    <Anchors>
+                        <Anchor point="LEFT" relativeTo="$parentHealthLabel" relativePoint="RIGHT">
+                            <Offset x="10" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentManaLabel" inherits="GameFontNormalSmall">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="$parentHealthLabel" relativePoint="BOTTOMLEFT">
+                            <Offset x="0" y="-2"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentMana" inherits="GameFontNormalSmall">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="$parentHealth" relativePoint="BOTTOMLEFT">
+                            <Offset x="0" y="-2"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Scripts>
+            <OnLoad>
+                TargetText:OnLoad()
+            </OnLoad>
+            <OnEvent>
+                TargetText:OnEvent(event, ...)
+            </OnEvent>
+            <OnShow>
+                TargetText:RegisterUpdates()
+            </OnShow>
+            <OnHide>
+                TargetText:UnregisterUpdates()
+            </OnHide>
+        </Scripts>
+    </Frame>
+</Ui>

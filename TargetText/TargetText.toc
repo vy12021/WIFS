@@ -1,0 +1,13 @@
+## Interface: 50040
+## Title: TargetText
+## Title-zhCN: |cffff0000目标信息展示|r
+## Notes: This Addons show info of the target what player focus
+## Notes-zhCN: 用来展示所选中目标的有用信息
+## LoadOnDemand: 0
+## Author: Tesla
+## Version: 1.0
+## X-Category: 开发
+## X-Date: 7-29-2014
+
+TargetText.lua
+TargetText.xml
