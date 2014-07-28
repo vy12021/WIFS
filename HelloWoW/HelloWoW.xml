@@ -1,0 +1,49 @@
+<Ui
+   xmlns="http://www.blizzard.com/wow/ui/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+   ..\..\FrameXML\UI.xsd"
+>
+    <Script file="HelloWoW.lua"/>
+	<Frame name="MyFrame" parent="UIParent" frameStrata="HIGH" enableMouse="true">
+        <Size x="100" y="100"/>
+        <Anchors>
+            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="UIParent">
+                <Offset y="0" x="200"/>
+            </Anchor>
+        </Anchors>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="MyText" text="hello wow" />
+				<Texture name="MyGraphic" file="Interface\Icons\Spell_Shadow_ShadowWordPain" setAllPoints="true">
+				</Texture>
+			</Layer>
+		</Layers>
+        <Scripts>
+            <OnEnter>
+                ChatFrame1:AddMessage("++ Enterd frame: ")
+            </OnEnter>
+            <OnLeave>
+                ChatFrame1:AddMessage("-- Leaving frame: ")
+            </OnLeave>
+        </Scripts>
+	</Frame>
+    <Frame name="MyFrame2" parent="MyFrame">
+        <Size>
+            <AbsDimension x="100" y="100"/>
+        </Size>
+        <Anchors>
+            <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="MyFrame"></Anchor>
+        </Anchors>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture name="$parentIcon" setAllPoints="true">
+                    <Gradient>
+                        <MinColor r="0.1" g="0" b="0"/>
+                        <MaxColor r="0" g="1" b="0"/>
+                    </Gradient>
+                </Texture>
+            </Layer>
+        </Layers>
+    </Frame>
+</Ui>

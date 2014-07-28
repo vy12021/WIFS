@@ -1,0 +1,12 @@
+## Interface: 50040
+## Title: CombatTracker
+## Title-zhCN: |cff00ff00伤害统计|r
+## Notes: DPS
+## Notes-zhCN: 第一个例子程序，伤害统计(DPS)
+## X-Author: Tesla
+## X-Category: 开发
+## X-Date: 7-27-2014
+## Description: Tracks incoming PDS, and how long you spend in combat
+
+CombatTracker.lua
+CombatTracker.xml

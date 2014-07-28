@@ -1,0 +1,17 @@
+## Interface: 50400
+## Title: HelloWoW
+## Title-zhCN: |cff0000ff你好魔兽|r
+## Notes: This is my first WoW Addon
+## Notes-zhCN: |cff00ff00这是我的第一个魔兽世界插件|r
+## Notes-deDE: Information
+## RequiredDeps:
+## LoadOnDemand: 0
+## SavedVariables:
+## Author: Tesla
+## Version: 1.0
+## X-Category: 开发
+## X-email: vy12021@gmail.com
+## X-Date: 07-24-2014
+
+HelloWoW.lua
+HelloWoW.xml
